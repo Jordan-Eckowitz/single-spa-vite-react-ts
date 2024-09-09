@@ -10,8 +10,8 @@ export const DummyComponent = () => {
         padding: 20,
       }}
     >
-      This is component is shared between applications and is imported via the
-      root config import map.
+      This component is shared between applications and is imported via the root
+      config import map.
     </div>
   );
 };
