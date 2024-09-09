@@ -16,6 +16,7 @@ This is a boilerplate setup showing how to use [Single-SPA](https://single-spa.j
 - Dev mode import map dependencies - `packages/root/src/importmap.dev.json`
 - Production mode import map dependencies - `packages/root/src/importmap.json`
 - Shared Dev & Production mode NPM import map dependencies - `packages/root/src/importmap.shared.json`
+- Application definitions are lifted into `packages/root/src/apps.ts` - this is simply an array which defines each application name and the its path mapping in the root config.
 
 ## Vite Configs
 
