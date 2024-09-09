@@ -1,0 +1,17 @@
+{
+  "name": "single-spa-vite-react-ts",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pnpm --recursive start",
+    "build": "pnpm --recursive build",
+    "start:build": "pnpm --recursive start:build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "8.1.8"
+  }
+}

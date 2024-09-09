@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "react": "https://cdn.jsdelivr.net/npm/react@18.3.1/+esm",
+    "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.3.1/+esm"
+  }
+}
