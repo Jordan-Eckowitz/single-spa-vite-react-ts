@@ -24,9 +24,6 @@ const BASE_URL_DEPLOYMENT = `http://localhost:${PORT}/`;
 export default defineConfig(({ command }) => ({
   // the base url is injected into any assets to ensure they're http references in production (not relative paths)
   base: command === "serve" ? "/" : BASE_URL_DEPLOYMENT,
-  preview: {
-    port: PORT,
-  },
   plugins: [
     react(),
     // command === "serve" ensures this plugin is only used during development (excluded from builds)
