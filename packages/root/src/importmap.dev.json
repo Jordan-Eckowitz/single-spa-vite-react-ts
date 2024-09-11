@@ -1,6 +1,6 @@
 {
   "imports": {
-    "@demo/mife": "http://localhost:5001/src/spa.tsx",
-    "@demo/util": "http://localhost:5002/src/spa.tsx"
+    "@demo/mife": "http://localhost:3001/src/spa.tsx",
+    "@demo/util": "http://localhost:3002/src/spa.tsx"
   }
 }

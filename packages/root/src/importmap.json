@@ -1,6 +1,6 @@
 {
   "imports": {
-    "@demo/mife": "http://localhost:5001/spa.js",
-    "@demo/util": "http://localhost:5002/spa.js"
+    "@demo/mife": "http://localhost:3001/spa.js",
+    "@demo/util": "http://localhost:3002/spa.js"
   }
 }

@@ -2,12 +2,13 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import vitePluginSingleSpa from "vite-plugin-single-spa";
 import externalize from "vite-plugin-externalize-dependencies";
+import vitePluginReactHMR from "vite-plugin-react-single-spa-hmr";
 
 /** single-spa entry point which contains references to lifecycles and shared exports */
 const ENTRY_POINT = "src/spa.tsx";
 
 /** Port for running local server and build previews */
-const PORT = 5002;
+const PORT = 3002;
 
 /** These are other single-spa applications, that are imported inside this application, as dependencies.
  * These externals are made available within this application via the root config import map.
@@ -27,16 +28,7 @@ export default defineConfig(({ command }) => ({
   plugins: [
     react(),
     // command === "serve" ensures this plugin is only used during development (excluded from builds)
-    command === "serve" && {
-      // this ensures that React Fast Refresh (HMR) is properly setup in the development environment.
-      // https://github.com/WJSoftware/vite-plugin-single-spa/issues/74#issuecomment-2315823945
-      name: "inject-react-refresh-preamble",
-      transform(code, id) {
-        if (id.includes(ENTRY_POINT)) {
-          return react.preambleCode.replace("__BASE__", "/") + code;
-        }
-      },
-    },
+    command === "serve" && vitePluginReactHMR(ENTRY_POINT),
     vitePluginSingleSpa({
       type: "mife",
       serverPort: PORT,

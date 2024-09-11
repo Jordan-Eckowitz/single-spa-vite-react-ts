@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import vitePluginSingleSpa from "vite-plugin-single-spa";
 
-const PORT = 5000;
+const PORT = 3000;
 
 // https://vitejs.dev/config/
 export default defineConfig({
